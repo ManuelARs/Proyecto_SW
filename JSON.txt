@@ -1,0 +1,7 @@
+{
+	"id" : 2,
+	"nombre" : "Carlos",
+	"apellido_p" : "Rodriguez",
+	"apellido_m" : "Marquez",
+	"grado" : "Primaria"
+}
