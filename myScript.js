@@ -16,6 +16,9 @@ function submitForm() {
     var apellido_p = form.apellido_p.value;
     var apellido_m = form.apellido_m.value;
     var grado = form.grado.value;
+    //For the response
+    var message;
+    const responseText = document.getElementById('responseText');
 
     //JSON object to send info
     var data = {
@@ -41,6 +44,9 @@ function submitForm() {
           .then(data => {
               // Access the message in the response
               console.log(data);
+              message = data;
+              //RESPONSE IN HTML
+              responseText.textContent = message;
               // alert(data);
           })
           .catch(error => {
@@ -63,6 +69,9 @@ function submitForm() {
             })
             .then(data => {
                 console.log(data);
+                message = data;
+                //RESPONSE IN HTML
+                responseText.textContent = message;
             })
             .catch(error => {
               // Handle any errors
@@ -86,6 +95,9 @@ function submitForm() {
         })
         .then(data => {
             console.log(data);
+            message = data;
+            //RESPONSE IN HTML
+            responseText.textContent = message;
         })
         .catch(error => {
           // Handle any errors

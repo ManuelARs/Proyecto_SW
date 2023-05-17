@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Servicios Web</title>
-
-    <style>
-        #hidden {
-            display: none;
-        }
-    </style>
+    <title>Proyecto Servicios Web</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <h1>Proyecto SW: Cliente Web</h1>
     <form id="myForm">
         <label for="method">Select Method:</label>
         <select name="method" id="method" onchange="toggleAdditionalFields()">
-            <option value="GET">GET</option>
+            <option value="GET">GET (GET sin id devuelve todos)</option>
             <option value="POST">POST</option>
             <option value="PUT">PUT</option>
             <option value="DELETE">DELETE</option>
@@ -28,25 +27,28 @@
 
         <!-- Additional fields for POST and PUT methods -->
         <div id="hidden">
-            <label for="nombre" id="nombreLabel" >Nombre:</label>
-            <input type="text" name="nombre" id="nombre" >
+            <label for="nombre" id="nombreLabel">Nombre:</label>
+            <input type="text" name="nombre" id="nombre">
             <br>
-            <label for="apellido_p" id="apellidoPLabel" >Apellido Paterno:</label>
-            <input type="text" name="apellido_p" id="apellido_p" >
+            <label for="apellido_p" id="apellidoPLabel">Apellido Paterno:</label>
+            <input type="text" name="apellido_p" id="apellido_p">
             <br>
-            <label for="apellido_m" id="apellidoMLabel" >Apellido Materno:</label>
+            <label for="apellido_m" id="apellidoMLabel">Apellido Materno:</label>
             <input type="text" name="apellido_m" id="apellido_m">
             <br>
             <label for="grado" id="gradoLabel">Grado:</label>
             <input type="text" name="grado" id="grado">
             <br>
         </div>
-        
-        
+
         <button type="button" onclick="submitForm()">Submit</button>
     </form>
-    
+
+    <div id="responseContainer">
+        Response: <span id="responseText"></span>
+    </div>
+
     <script src="myScript.js"></script>
 </body>
-</html>
 
+</html>
